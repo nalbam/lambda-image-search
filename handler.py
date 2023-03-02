@@ -16,8 +16,15 @@ def search_image(event, context):
     # Initialize Google Images Search
     gis = GoogleImagesSearch(GOOGLE_API_KEY, GOOGLE_API_SECRET)
 
+    _search_params = {
+        "q": q,
+        "num": 1,
+        # "fileType": "jpg|gif|png",
+        # "rights": "cc_publicdomain|cc_attribute|cc_sharealike|cc_noncommercial|cc_nonderived",
+    }
+
     # Define search params
-    gis.search({"q": q})
+    gis.search(search_params=_search_params)
 
     # Wait for image results
     gis.wait(1)
