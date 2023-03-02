@@ -27,6 +27,8 @@ def search_image(event, context):
     # # Wait for image results
     # gis.wait(1)
 
+    print("search_image: {}".format(gis.results()))
+
     # Get first result image url
     result_url = gis.results()[0]["url"]
 
