@@ -1,4 +1,5 @@
 import os
+import time
 
 from google_images_search import GoogleImagesSearch
 
@@ -24,8 +25,9 @@ def search_image(event, context):
     # Define search params
     gis.search(search_params={"q": q})
 
-    # # Wait for image results
+    # Wait for image results
     # gis.wait(1)
+    time.sleep(1)
 
     print("search_image: {}".format(gis.results()))
 
