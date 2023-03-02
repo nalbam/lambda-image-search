@@ -12,3 +12,7 @@ functions:
       - http:
           path: /search
           method: get
+
+plugins:
+  - serverless-python-requirements
+  - serverless-dotenv-plugin
