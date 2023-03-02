@@ -24,8 +24,8 @@ def search_image(event, context):
     # Define search params
     gis.search(search_params={"q": q})
 
-    # Wait for image results
-    gis.wait(1)
+    # # Wait for image results
+    # gis.wait(1)
 
     # Get first result image url
     result_url = gis.results()[0]["url"]
