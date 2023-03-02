@@ -24,7 +24,7 @@ def search_image(event, context):
 
     _search_params = {
         'q': '...',
-        'num': 10,
+        'num': 2,
         'fileType': 'jpg|png',
         'rights': 'cc_publicdomain',
     }
