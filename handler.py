@@ -10,13 +10,14 @@ def search_image(event, context):
     print("search_image: {}".format(event))
 
     # Parse search query from event
-    query = event["query"]
+    query_params = event.get("queryStringParameters", {})
+    q = query_params.get("q")
 
     # Initialize Google Images Search
     gis = GoogleImagesSearch(GOOGLE_API_KEY, GOOGLE_API_SECRET)
 
     # Define search params
-    gis.search({"q": query})
+    gis.search({"q": q})
 
     # Wait for image results
     gis.wait(1)
