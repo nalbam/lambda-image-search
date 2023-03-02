@@ -21,15 +21,8 @@ def search_image(event, context):
         custom_search_cx=GOOGLE_API_SECRET,
     )
 
-    _search_params = {
-        "q": q,
-        "num": 1,
-        # "fileType": "jpg|gif|png",
-        # "rights": "cc_publicdomain|cc_attribute|cc_sharealike|cc_noncommercial|cc_nonderived",
-    }
-
     # Define search params
-    gis.search(search_params=_search_params)
+    gis.search(search_params={"q": q})
 
     # Wait for image results
     gis.wait(1)
