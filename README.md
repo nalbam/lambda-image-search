@@ -23,6 +23,7 @@ $ cp .env.example .env
 
 * <https://console.developers.google.com/>
 * <https://console.cloud.google.com/apis/credentials>
+* <https://cse.google.com/all>
 
 ```bash
 GOOGLE_API_KEY="xxxx"

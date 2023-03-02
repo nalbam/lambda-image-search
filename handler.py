@@ -16,7 +16,10 @@ def search_image(event, context):
     print("search_image: {}".format(q))
 
     # Initialize Google Images Search
-    gis = GoogleImagesSearch(GOOGLE_API_KEY, GOOGLE_API_SECRET)
+    gis = GoogleImagesSearch(
+        developer_key=GOOGLE_API_KEY,
+        custom_search_cx=GOOGLE_API_SECRET,
+    )
 
     _search_params = {
         "q": q,
