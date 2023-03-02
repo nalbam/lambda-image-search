@@ -7,6 +7,8 @@ GOOGLE_API_SECRET = os.environ["GOOGLE_API_SECRET"]
 
 
 def search_image(event, context):
+    print("search_image: {}".format(event))
+
     # Parse search query from event
     query = event["query"]
 
@@ -21,6 +23,8 @@ def search_image(event, context):
 
     # Get first result image url
     result_url = gis.results()[0]["url"]
+
+    print("search_image: {}".format(result_url))
 
     # Redirect to result url
     return {
